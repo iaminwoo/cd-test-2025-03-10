@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:postgresql://jhs512-db.internal:5432/cd_2025_03_10_prod
     username: postgres
-    password:
+    password: ${custom.prod.db.password}
     driver-class-name: org.postgresql.Driver
     hikari:
       auto-commit: false
