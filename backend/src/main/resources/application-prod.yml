@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://jhs512-db.internal:5432/cd_2025_03_10_prod
+    url: jdbc:postgresql://iaminwoo-db.internal:5432/cd_2025_03_10_prod
     username: postgres
     password: ${custom.prod.db.password}
     driver-class-name: org.postgresql.Driver
