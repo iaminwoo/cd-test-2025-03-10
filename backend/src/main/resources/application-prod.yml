@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:postgresql://iaminwoo-db.internal:5432/cd_2025_03_10_prod
     username: postgres
-    password: uDHSLNPgIv94h1i
+    password: ${custom.prod.db.password}
     driver-class-name: org.postgresql.Driver
     hikari:
       auto-commit: false
