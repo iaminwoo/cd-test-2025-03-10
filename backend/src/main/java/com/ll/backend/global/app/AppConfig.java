@@ -41,6 +41,7 @@ public class AppConfig {
     @Value("${custom.site.frontUrl}")
     public void setSiteFrontUrl(String siteFrontUrl) {
         AppConfig.siteFrontUrl = siteFrontUrl;
+        System.out.println("Set siteFrontUrl: $siteFrontUrl");// 로그 출력
     }
 
     @Value("${custom.site.backUrl}")
