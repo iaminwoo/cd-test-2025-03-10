@@ -25,8 +25,6 @@ public class AppConfig {
     private static String siteFrontUrl;
     @Getter
     private static String siteBackUrl;
-    @Getter
-    private static String siteCookieDomain;
 
     @Autowired
     public void setEnvironment(Environment environment) {
@@ -47,10 +45,5 @@ public class AppConfig {
     @Value("${custom.site.backUrl}")
     public void setSiteBackUrl(String siteBackUrl) {
         AppConfig.siteBackUrl = siteBackUrl;
-    }
-
-    @Value("${custom.site.cookieDomain}")
-    public void setSiteCookieDomain(String siteCookieDomain) {
-        AppConfig.siteCookieDomain = siteCookieDomain;
     }
 }
