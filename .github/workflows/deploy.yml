@@ -16,7 +16,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
       - uses: superfly/flyctl-actions/setup-flyctl@master
+
+      - name: application-secret.yml 생성
+         env:
+           APPLICATION_SECRET: ${{ secrets.APPLICATION_SECRET_YML }}
+         run: echo "$APPLICATION_SECRET" > backend/src/main/resources/application-secret.yml
+         
       - run: flyctl deploy --remote-only
         working-directory: backend
         env:
